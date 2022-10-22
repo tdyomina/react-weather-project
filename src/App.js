@@ -1,5 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import ReactAnimatedWeather from "react-animated-weather";
+
+const defaults = {
+  icon: "CLEAR_DAY",
+  color: "goldenrod",
+  size: 512,
+  animate: true,
+};
 
 function App() {
   return (
@@ -17,6 +25,14 @@ function App() {
         >
           Learn React
         </a>
+        const App = () => (
+        <ReactAnimatedWeather
+          icon={defaults.icon}
+          color={defaults.color}
+          size={defaults.size}
+          animate={defaults.animate}
+        />
+        );
       </header>
     </div>
   );
