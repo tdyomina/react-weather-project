@@ -2,10 +2,16 @@ import React, { useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import axios from "axios";
+import ReactAnimatedWeather from "react-animated-weather";
+
+const defaults = {
+  size: 50,
+  animate: true,
+};
 
 function App() {
-  let [city, setCity] = useState("");
-  const [data, setData] = useState(false);
+  let [city, setCity] = useState("London");
+  const [data, setData] = useState(true);
   const [weather, setWeather] = useState({});
 
   function updateCity(event) {
@@ -39,13 +45,7 @@ function App() {
   );
   if (data) {
     return (
-      <div>
-        <div className="App">
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <p>Weather App with React</p>
-          </header>
-        </div>
+      <div className="App">
         {searchForm}
         <ul>
           <li className="list">
@@ -62,6 +62,48 @@ function App() {
             />
           </li>
         </ul>
+        <div>
+          <div className="weather">
+            <ReactAnimatedWeather
+              icon="CLEAR_DAY"
+              color="goldenrod"
+              size={defaults.size}
+              animate={defaults.animate}
+            />
+            <ReactAnimatedWeather
+              icon="SNOW"
+              color="gray"
+              size={defaults.size}
+              animate={defaults.animate}
+            />
+            <ReactAnimatedWeather
+              icon="PARTLY_CLOUDY_DAY"
+              color="pink"
+              size={defaults.size}
+              animate={defaults.animate}
+            />
+            <ReactAnimatedWeather
+              icon="SLEET"
+              color="blue"
+              size={defaults.size}
+              animate={defaults.animate}
+            />
+          </div>
+          <div>
+            <a
+              href="https://github.com/tdyomina/react-weather-project"
+              alt="my Git link"
+              target="_blank"
+              rel="noreferrer"
+            >
+              my Git
+            </a>
+          </div>
+          <header className="App-header">
+            <img src={logo} className="App-logo" alt="logo" />
+            <p>Weather App with React</p>
+          </header>
+        </div>
       </div>
     );
   } else {
