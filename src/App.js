@@ -1,13 +1,7 @@
+import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import ReactAnimatedWeather from "react-animated-weather";
-
-const defaults = {
-  icon: "CLEAR_DAY",
-  color: "goldenrod",
-  size: 512,
-  animate: true,
-};
+import axios from "axios";
 
 function App() {
   return (
@@ -15,25 +9,10 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Weather App with React
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        const App = () => (
-        <ReactAnimatedWeather
-          icon={defaults.icon}
-          color={defaults.color}
-          size={defaults.size}
-          animate={defaults.animate}
-        />
-        );
       </header>
+      
     </div>
   );
 }
