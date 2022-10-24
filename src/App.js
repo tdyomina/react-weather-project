@@ -46,6 +46,7 @@ function App() {
   if (data) {
     return (
       <div className="App">
+        <h1 className="App-header-h1">Weather Search by City</h1>
         {searchForm}
         <ul>
           <li className="list">
