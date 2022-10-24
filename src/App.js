@@ -54,7 +54,7 @@ function App() {
           </li>
           <li className="list">Description: {weather.description}</li>
           <li className="list">Humidity: {weather.humidity}%</li>
-          <li className="list">Wind: {weather.wind}km/h</li>
+          <li className="list">Wind: {Math.round(weather.wind)}km/h</li>
           <li className="list">
             <img
               src={weather.icon}
