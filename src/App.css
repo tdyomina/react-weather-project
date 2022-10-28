@@ -45,3 +45,7 @@
   list-style-type: none;
   color: #61dafb;
 }
+
+.searchForm {
+  max-width: 500px;
+}
